@@ -10,37 +10,35 @@ namespace Launch_LinqExercises
             Assert.True(allZeros);
         }
 
-        [Fact(Skip = "Remove this when code is complete")]
+        [Fact]
         public void NotAllZeros()
         {
             var numbers = new List<int> { 0, 0, 0, 0, 1, 0, 0 };
-            var allZeros = numbers.All(n =>
-                    n == n // replace with your code .. can collapse into one line above
-            );
+            var allZeros = numbers.All(n => n == 0);
             Assert.False(allZeros);
         }
 
-        [Fact(Skip = "Remove this when code is complete")]
+        [Fact]
         public void AllGone()
         {
             var words = new List<string> { "gone", "gone", "gone", "gone", "gone", "gone", "gone" };
-            var allGone = false; // replace with your code;
+            var allGone = words.All(word => word == "gone");
             Assert.True(allGone);
         }
 
-        [Fact(Skip = "Remove this when code is complete")]
+        [Fact]
         public void NotAllGone()
         {
             var words = new List<string> { "gone", "gone", "gone", "gone", "there", "gone", "gone" };
-            var allGone = false; // replace with your code;
+            var allGone = words.All(word => word != "gone");
             Assert.False(allGone);
         }
 
-        [Fact(Skip = "Remove this when code is complete")]
+        [Fact]
         public void AllEmpty()
         {
             var strings = new List<string> { "", "", "", "", "", "", "" };
-            var allEmpty = false; // replace with your code;
+            var allEmpty = strings.All(string => string == "");
             Assert.True(allEmpty);
         }
 
